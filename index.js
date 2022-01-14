@@ -352,10 +352,10 @@ For example artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 
 */
 
 function artistByCountry(array, nation){
-  let list = [];
+  const list = [];
   for (let i = 0; i < array.length; i++) {
     if (array[i].nationality === nation) {
-      list.push[array[i].name];
+      list.push(array[i].name);
     }
   }
   return list;
