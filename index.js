@@ -250,13 +250,13 @@ function get20s(array) {
   for (let i = 0; i < array.length; i++) {
     // let words = array[i].bio.split(' ');
     //if (words[9] >= 1900 && words[13] < 2000 ) {
-      if (array[i].bio.split('')[9] >= 1900 && array[i].bio.split('')[13] < 2000) {
+      if (array[i].years.split(' ')[0] >= 1900 && array[i].years.split(' ')[2] < 2000) {
       newArray.push(array[i].name);
   }
 }
 return newArray;
 }
-// console.log(artists[0].bio.split(' '));
+//console.log(artists[0].years.split(' ')[2]);
 console.log(get20s(artists));
 
 
@@ -335,7 +335,7 @@ For example artistInfo(artists, 'Frida Kahlo') will return:
 function artistInfo(array, nam){
   for (let i = 0; i < array.length; i++) {
    if (array[i].name === nam) {
-     return array[i].bio;
+    return [array[i].bio];
    }
   }
 }
@@ -353,7 +353,7 @@ For example artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 
 
 function artistByCountry(array, nation){
   let list = [];
-  for ( let i = 0; i , array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i].nationality === nation) {
       list.push[array[i].name];
     }
